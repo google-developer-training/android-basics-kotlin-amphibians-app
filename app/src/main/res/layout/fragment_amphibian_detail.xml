@@ -29,7 +29,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- TODO: set the text to the name from the single Amphibian object in the view model -->
         <TextView
             android:id="@+id/name"
             android:layout_width="match_parent"
@@ -38,6 +37,7 @@
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:text="@{viewModel.selectedAmphiban.name}"
             tools:text="Blue Jeans Frog"/>
 
         <View
@@ -58,6 +58,7 @@
             android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/name"
+            android:text="@{viewModel.selectedAmphiban.description}"
             tools:text="Bright red body, blue legs"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
